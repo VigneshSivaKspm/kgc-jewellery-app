@@ -185,4 +185,5 @@ HTML file's logic (search for the matching `function` names in
 reads/writes correctly through `localDB.js` and syncs through
 `firestoreSync.js`, you just need the table/form UI for each.
 #   k g c - j e w e l l e r y - a p p  
+ #   k g c - j e w e l l e r y - a p p  
  
