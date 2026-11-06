@@ -1,0 +1,12 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Each logged-in user owns exactly one shop document, keyed by their
+    // own uid. This keeps every shop's data private to that shop's login.
+    match /shops/{shopId} {
+      allow read, write: if request.auth != null && request.auth.uid == shopId;
+    }
+  }
+}

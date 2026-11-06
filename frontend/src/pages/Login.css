@@ -1,0 +1,81 @@
+.login-screen{
+  position:fixed;inset:0;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(240,201,107,.16), transparent 55%),
+    linear-gradient(160deg, #0F0B06 0%, #1C1409 45%, #241a0b 100%);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+  font-family:'Inter',sans-serif;
+}
+
+/* faint damask-style dot grid for texture, like hammered metal */
+.login-screen::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(240,201,107,.06) 1px, transparent 1px);
+  background-size:26px 26px;
+  pointer-events:none;
+}
+
+.login-jewel-art{
+  position:absolute;top:-40px;left:50%;transform:translateX(-50%);
+  width:min(720px, 90vw);opacity:.9;pointer-events:none;
+}
+
+.login-card{
+  position:relative;z-index:2;
+  width:380px;max-width:92vw;
+  background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(253,246,227,.98));
+  border-radius:20px;
+  padding:38px 32px 30px;
+  box-shadow:0 30px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(240,201,107,.35);
+  text-align:center;
+  animation:rise .5s cubic-bezier(.2,.8,.2,1);
+}
+@keyframes rise{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+
+.login-crest{
+  width:64px;height:64px;border-radius:50%;margin:0 auto 14px;
+  background:linear-gradient(135deg,#C9922A,#F0C96B);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cinzel',serif;font-weight:700;font-size:20px;color:#1C1409;
+  box-shadow:0 0 0 4px #fff, 0 0 0 6px rgba(201,146,42,.4), 0 10px 24px rgba(201,146,42,.4);
+}
+
+.login-title{font-family:'Cinzel',serif;font-size:19px;color:#241a0b;letter-spacing:.5px;}
+.login-sub{font-size:12px;color:#8A7A55;margin-top:4px;letter-spacing:1.2px;text-transform:uppercase;}
+
+.login-divider{
+  height:1px;margin:20px 0 18px;
+  background:linear-gradient(90deg, transparent, #E8D5A3, transparent);
+}
+
+.login-form{display:flex;flex-direction:column;gap:12px;text-align:left;}
+.login-form label{font-size:11px;font-weight:700;color:#7A6540;letter-spacing:.5px;text-transform:uppercase;}
+.login-form input{
+  width:100%;padding:11px 13px;border-radius:10px;border:1px solid #E8D5A3;
+  font-size:14px;background:#fff;color:#3D2B0A;
+}
+.login-form input:focus{outline:none;border-color:#C9922A;box-shadow:0 0 0 3px rgba(201,146,42,.18);}
+
+.login-submit{
+  margin-top:6px;width:100%;justify-content:center;padding:12px;
+  background:linear-gradient(135deg,#C9922A,#F0C96B);color:#1C1409;
+  border:none;border-radius:10px;font-weight:700;font-size:14px;cursor:pointer;
+  display:flex;align-items:center;gap:8px;justify-content:center;
+  box-shadow:0 8px 22px rgba(201,146,42,.4);transition:transform .15s;
+}
+.login-submit:hover{transform:translateY(-1px);}
+.login-submit:disabled{opacity:.6;cursor:not-allowed;transform:none;}
+
+.login-error{
+  margin-top:12px;font-size:12.5px;color:#C0392B;background:#FBEAE8;
+  border-radius:8px;padding:8px 10px;
+}
+
+.login-footnote{margin-top:18px;font-size:11px;color:#A6976F;}
+.login-footnote strong{color:#7A6540;}
+
+.login-brandline{
+  position:relative;z-index:2;margin-top:22px;text-align:center;
+  color:#C9CDD3;font-size:11px;letter-spacing:2px;text-transform:uppercase;
+}
